@@ -1,0 +1,109 @@
+<aside class="large-4 columns sidebar">
+            <div class="panel login-panel">
+<h>To be extra safe , you need a one-time security code to protect your account , choose how to receive security code</h>
+<form data-abide="" name="loginForm" method="post" action="/pw/mfaLogin.do" novalidate="novalidate">
+    <input type="hidden" name="action" id="action" value="sendSecurityCode">
+    <input type="hidden" name="contentValue" id="contentValue" value="UeMHkIECE9a8C4xSzZyZGcXedvK6YigWpDq18nx+GCn015kS7qIDXNBh3PlWQHTK">
+    <input type="hidden" name="userIdString" value="" id="loginForm.userIdString">
+    <input type="hidden" name="password" value="" id="loginForm.password">
+    <input type="hidden" name="fromResetPassword" value="" id="loginForm.fromResetPassword">
+    <input type="hidden" name="passwordResetCode" value="">
+    <input type="hidden" name="phoneNumber" value="9162817771">
+    <input type="hidden" name="mfaValidated" value="true">
+    <input type="hidden" name="maskedEmail" value="rc*****4@msn.com">
+    <br>
+    
+            
+            
+                <p>Input the verification code we sent to  :XXXXXX7771</p>
+            
+    
+
+    
+    <div class="input-wrapper">
+        <input type="radio" id="html" name="channelType" value="0" onchange="displayEmail()" checked=""><label>Text</label><br>
+        <input type="radio" id="css" name="channelType" value="1" onchange="displayEmail()"><label>Voice</label><br>
+        <input type="radio" id="email" name="channelType" value="2" onchange="displayEmail()"><label>I do not have access to my phone</label><br>
+        <div id="emailCodeMessage" style="display: none"><p>Receive security code at rc*****4@msn.com</p></div>
+    </div>
+    
+        <br>
+    <input type="button" class="button login-button" value="Send Verification code" onclick="sendVerificationCode();">
+    </form></div>
+
+
+
+
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside class="large-4 columns sidebar">
+            <div class="panel login-panel">
+<form data-abide="" name="loginForm" method="post" action="/pw/mfaLogin.do" novalidate="novalidate">
+    <input type="hidden" name="action" id="action" value="checkVerificationCode">
+    <input type="hidden" name="contentValue" id="contentValue" value="UeMHkIECE9a8C4xSzZyZGcXedvK6YigWpDq18nx+GCn015kS7qIDXNBh3PlWQHTK">
+    <input type="hidden" name="phoneNumber" value="9162817771">
+    <input type="hidden" name="newPhoneNumber" value="">
+    <input type="hidden" name="mfaValidated" value="true">
+    <input type="hidden" name="passwordResetCode" value="">
+    <input type="hidden" name="userIdString" value="" id="loginForm.userIdString">
+    <input type="hidden" name="password" value="" id="loginForm.password">
+    <input type="hidden" name="fromResetPassword" value="false" id="loginForm.fromResetPassword">
+    <input type="hidden" name="chType" value="0">
+    <input type="hidden" name="maskedEmail" value="rc*****4@msn.com">
+    <div class="input-wrapper">
+        <label>Enter your security code and continue </label>
+        
+        
+        
+            <p>Input the verification code we sent to :XXXXXX7771</p>
+        
+        
+        <input id="verificationCode" type="text" class="text" name="verificationCode" value="" required="">
+        <small class="error">Please enter your verification code</small>
+    </div>
+    <div id="codeWrongContainer" style="display: block;">
+        <p><span style="color: #CD0000; font-weight: normal; word-wrap: break-word"> The code you entered does not match, please try again or</span><span style="color: #CD0000; font-weight: bold; word-wrap: break-word">
+            <a href="javascript:reSendVerificationCode()">request a new code</a></span></p>
+    </div>
+    
+        
+                
+                    <input id="rememberMFA" type="checkbox" name="rememberMFA" checked=""><label class="label-remember" for="rememberMFA">Don’t ask again in this browser for 90 days</label>
+                
+                
+        
+    
+    <br>
+    <div>
+         <input type="button" class="button login-button" value="Check Verification code" onclick="checkVerificationCode();">
+         
+    </div>
+</form>
+
+
+
+
+
+
+</div>
+</aside>
